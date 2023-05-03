@@ -24,8 +24,8 @@ Partial Class frmExtra
     Private Sub InitializeComponent()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -41,47 +41,50 @@ Partial Class frmExtra
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(1, 138)
+        Me.Button1.Location = New System.Drawing.Point(57, 138)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(112, 49)
         Me.Button1.TabIndex = 20
         Me.Button1.Text = "Spin"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(173, 138)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(112, 49)
-        Me.Button2.TabIndex = 21
-        Me.Button2.Text = "Buy A Vowel (250$)"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(339, 138)
+        Me.Button3.Location = New System.Drawing.Point(297, 138)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(112, 49)
         Me.Button3.TabIndex = 22
         Me.Button3.Text = "Solve!"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label1.Location = New System.Drawing.Point(194, 115)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(75, 81)
+        Me.Label1.TabIndex = 23
+        Me.Label1.Text = "Or"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'frmExtra
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(464, 259)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblTitle)
         Me.Name = "frmExtra"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents lblTitle As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents Label1 As Label
 End Class
