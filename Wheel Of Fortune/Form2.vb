@@ -200,7 +200,7 @@ Public Class frmGame
                 MsgBox("There are no words in this file")
             End If
             intRandNum = Randgen.Next(0, intUpper)
-            randWord = IO.File.ReadAllLines("C:\temp\EList.txt").ElementAt(intRandNum).ToString
+            randWord = IO.File.ReadAllLines("C:\temp\HardList.txt").ElementAt(intRandNum).ToString
             strWord = randWord
             For intIndex As Integer = 0 To randWord.Length - 1
                 If randWord(intIndex) = Space(1) Then
