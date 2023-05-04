@@ -1,12 +1,21 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock
+﻿Option Strict Off
+Option Infer Off
+Option Explicit On
+'Program: Wheel of fortune
+'Purpose: recreation of Wheel of Fortune
+'Programmer: Will Young
+
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock
+
 
 Public Class frmGame
+
     Dim dblDiff As Double
     Dim strWord As String
     Dim wheelstate = 0
     Dim RandGen As New Random
     Dim intRandNum As Integer
-    Dim uppertime
+    Dim uppertime As Double
     Dim Time As Integer
     Dim TurnState As Double
     Dim dblValue As Double
@@ -41,7 +50,7 @@ Public Class frmGame
 
         If Time = uppertime Then
             Timer1.Stop()
-            Dim intVal
+            Dim intVal As Double
             intVal = RandGen.Next(0, 25)
             If intVal = 0 Then
                 MsgBox("You are playing for 10,000 Dollars!")
@@ -49,11 +58,11 @@ Public Class frmGame
             ElseIf intVal > 0 And intVal < 3 Then
                 MsgBox("You are Bankrupt!")
                 If TurnState = 1 Then
-                    lblOnecount.Text = 0
+                    lblOnecount.Text = "0"
                     TurnState = 2
                     changeTurn()
                 ElseIf TurnState = 2 Then
-                    lblTwocount.Text = 0
+                    lblTwocount.Text = "0"
                     TurnState = 1
                     changeTurn()
                 End If
@@ -155,7 +164,7 @@ Public Class frmGame
             Dim intRandNum As Integer
             Dim Randgen As New Random
             Dim intUpper As Integer
-            Dim randWord
+            Dim randWord As String
             intUpper = IO.File.ReadAllLines("C:\temp\EasyList.txt").Count
             If intUpper = 0 Then
                 MsgBox("There are no words in this file")
@@ -185,7 +194,7 @@ Public Class frmGame
             Dim intRandNum As Integer
             Dim Randgen As New Random
             Dim intUpper As Integer
-            Dim randWord
+            Dim randWord As String
             intUpper = IO.File.ReadAllLines("C:\temp\HardList.txt").Count
             If intUpper = 0 Then
                 MsgBox("There are no words in this file")
@@ -200,8 +209,8 @@ Public Class frmGame
                     lblWord.Text = lblWord.Text + " "
 
 
-                    Else
-                        lblWord.Text = lblWord.Text + "_"
+                Else
+                    lblWord.Text = lblWord.Text + "_"
 
                 End If
             Next
@@ -433,7 +442,7 @@ Public Class frmGame
     End Sub
 
     Private Sub btnSolve_Click(sender As Object, e As EventArgs) Handles btnSolve.Click
-        Dim strSA = txtSolve.Text.ToString
+        Dim strSA As String = txtSolve.Text.ToString
 
         If strSA.ToString.ToUpper = strWord.ToUpper Then
 
