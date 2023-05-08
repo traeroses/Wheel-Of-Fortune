@@ -31,7 +31,6 @@ Partial Class frmGame
         Me.lblTwocount = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.picWheel = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.txtSolve = New System.Windows.Forms.TextBox()
         Me.btnY = New System.Windows.Forms.Button()
@@ -64,6 +63,7 @@ Partial Class frmGame
         Me.lblWord = New System.Windows.Forms.Label()
         Me.imgWheel = New System.Windows.Forms.ImageList(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.picWheel = New System.Windows.Forms.PictureBox()
         CType(Me.picWheel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -135,16 +135,6 @@ Partial Class frmGame
         Me.Label5.Size = New System.Drawing.Size(79, 15)
         Me.Label5.TabIndex = 33
         Me.Label5.Text = "Player Two"
-        '
-        'picWheel
-        '
-        Me.picWheel.Image = Global.Wheel_Of_Fortune.My.Resources.Resources.wheel_1
-        Me.picWheel.Location = New System.Drawing.Point(1, 149)
-        Me.picWheel.Name = "picWheel"
-        Me.picWheel.Size = New System.Drawing.Size(396, 329)
-        Me.picWheel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picWheel.TabIndex = 37
-        Me.picWheel.TabStop = False
         '
         'Button1
         '
@@ -448,34 +438,44 @@ Partial Class frmGame
         '
         Me.imgWheel.ImageStream = CType(resources.GetObject("imgWheel.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.imgWheel.TransparentColor = System.Drawing.Color.Transparent
-        Me.imgWheel.Images.SetKeyName(0, "wheel 1.png")
-        Me.imgWheel.Images.SetKeyName(1, "wheel 2.png")
-        Me.imgWheel.Images.SetKeyName(2, "wheel 3.png")
-        Me.imgWheel.Images.SetKeyName(3, "wheel 4.png")
-        Me.imgWheel.Images.SetKeyName(4, "wheel 5.png")
-        Me.imgWheel.Images.SetKeyName(5, "wheel 6.png")
-        Me.imgWheel.Images.SetKeyName(6, "wheel 7.png")
-        Me.imgWheel.Images.SetKeyName(7, "wheel 8.png")
-        Me.imgWheel.Images.SetKeyName(8, "wheel 9.png")
-        Me.imgWheel.Images.SetKeyName(9, "wheel 10.png")
-        Me.imgWheel.Images.SetKeyName(10, "wheel 11.png")
-        Me.imgWheel.Images.SetKeyName(11, "wheel 12.png")
-        Me.imgWheel.Images.SetKeyName(12, "wheel 13.png")
-        Me.imgWheel.Images.SetKeyName(13, "wheel 14.png")
-        Me.imgWheel.Images.SetKeyName(14, "wheel 15.png")
-        Me.imgWheel.Images.SetKeyName(15, "wheel 16.png")
-        Me.imgWheel.Images.SetKeyName(16, "wheel 18.png")
-        Me.imgWheel.Images.SetKeyName(17, "wheel 19.png")
-        Me.imgWheel.Images.SetKeyName(18, "wheel 20.png")
-        Me.imgWheel.Images.SetKeyName(19, "wheel 21.png")
-        Me.imgWheel.Images.SetKeyName(20, "wheel 22.png")
-        Me.imgWheel.Images.SetKeyName(21, "wheel 23.png")
-        Me.imgWheel.Images.SetKeyName(22, "wheel 24.png")
-        Me.imgWheel.Images.SetKeyName(23, "wheel 25.png")
-        Me.imgWheel.Images.SetKeyName(24, "wheel 26.png")
+        Me.imgWheel.Images.SetKeyName(0, "1.png")
+        Me.imgWheel.Images.SetKeyName(1, "2.png")
+        Me.imgWheel.Images.SetKeyName(2, "3.png")
+        Me.imgWheel.Images.SetKeyName(3, "4.png")
+        Me.imgWheel.Images.SetKeyName(4, "5.png")
+        Me.imgWheel.Images.SetKeyName(5, "6.png")
+        Me.imgWheel.Images.SetKeyName(6, "7.png")
+        Me.imgWheel.Images.SetKeyName(7, "8.png")
+        Me.imgWheel.Images.SetKeyName(8, "9.png")
+        Me.imgWheel.Images.SetKeyName(9, "10.png")
+        Me.imgWheel.Images.SetKeyName(10, "11.png")
+        Me.imgWheel.Images.SetKeyName(11, "12.png")
+        Me.imgWheel.Images.SetKeyName(12, "13.png")
+        Me.imgWheel.Images.SetKeyName(13, "14.png")
+        Me.imgWheel.Images.SetKeyName(14, "15.png")
+        Me.imgWheel.Images.SetKeyName(15, "16.png")
+        Me.imgWheel.Images.SetKeyName(16, "17.png")
+        Me.imgWheel.Images.SetKeyName(17, "18.png")
+        Me.imgWheel.Images.SetKeyName(18, "19.png")
+        Me.imgWheel.Images.SetKeyName(19, "20.png")
+        Me.imgWheel.Images.SetKeyName(20, "21.png")
+        Me.imgWheel.Images.SetKeyName(21, "22.png")
+        Me.imgWheel.Images.SetKeyName(22, "23.png")
+        Me.imgWheel.Images.SetKeyName(23, "24.png")
+        Me.imgWheel.Images.SetKeyName(24, "25.png")
         '
         'Timer1
         '
+        '
+        'picWheel
+        '
+        Me.picWheel.Image = Global.Wheel_Of_Fortune.My.Resources.Resources.Picture1
+        Me.picWheel.Location = New System.Drawing.Point(1, 149)
+        Me.picWheel.Name = "picWheel"
+        Me.picWheel.Size = New System.Drawing.Size(396, 329)
+        Me.picWheel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picWheel.TabIndex = 37
+        Me.picWheel.TabStop = False
         '
         'frmGame
         '
