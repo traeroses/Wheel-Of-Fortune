@@ -183,7 +183,7 @@ Public Class frmGame
 
 
                 Else
-                    lblWord.Text = lblWord.Text + "_"
+                    lblWord.Text = lblWord.Text + "_" + " "
 
                 End If
             Next
