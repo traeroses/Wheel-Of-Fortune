@@ -39,7 +39,7 @@ Public Class frmGame
 
         Timer1.Start()
         Time = 0
-        intRandNum = RandGen.Next(15, 24)
+        intRandNum = RandGen.Next(13, 39)
         uppertime = intRandNum
 
 
@@ -47,26 +47,37 @@ Public Class frmGame
     End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Time += 1
-
+        If Time = intRandNum - 5 Then
+            Timer1.Interval += 100
+        End If
+        If Time = intRandNum - 3 Then
+            Timer1.Interval += 25
+        End If
+        If Time = intRandNum - 2 Then
+            Timer1.Interval += 50
+        End If
+        If Time = intRandNum - 1 Then
+            Timer1.Interval += 50
+        End If
         If Time = uppertime Then
             Timer1.Stop()
             Dim intVal As Double
-            intVal = RandGen.Next(0, 25)
-            If intVal = 0 Then
+            intVal = wheelstate
+            If intVal = 1 Then
                 MsgBox("You are playing for 10,000 Dollars!")
                 dblValue = 10000
-            ElseIf intVal > 0 And intVal < 3 Then
+            ElseIf intVal = 2 Or intVal = 8 Then
                 MsgBox("You are Bankrupt!")
                 If TurnState = 1 Then
                     lblOnecount.Text = "0"
                     TurnState = 2
                     changeTurn()
-                ElseIf TurnState = 2 Then
+                ElseIf Turnstate = 2 Then
                     lblTwocount.Text = "0"
                     TurnState = 1
                     changeTurn()
                 End If
-            ElseIf intVal > 2 And intVal < 6 Then
+            ElseIf intVal = 9 Or intVal = 13 Or intVal = 21 Then
                 MsgBox("You've been skipped!")
                 If TurnState = 1 Then
                     TurnState = 2
@@ -75,13 +86,13 @@ Public Class frmGame
                     TurnState = 1
                     changeTurn()
                 End If
-            ElseIf intVal > 5 And intVal < 9 Then
+            ElseIf intVal = 16 Or intVal = 12 Or intVal = 3 Then
                 MsgBox("You are playing for 5,000 Dollars!")
                 dblValue = 5000
-            ElseIf intVal > 8 And intVal < 15 Then
+            ElseIf intVal = 24 Or intVal = 18 Or intVal = 14 Or intVal = 13 Or intVal = 5 Or intVal = 4 Then
                 MsgBox("You are playing for 2,000 Dollars!")
                 dblValue = 2000
-            ElseIf intVal > 14 And intVal < 26 Then
+            ElseIf intVal = 0 Or intVal = 6 Or intVal = 7 Or intVal = 10 Or intVal = 15 Or intVal = 17 Or intVal = 19 Or intVal = 20 Or intVal = 22 Or intVal = 23 Then
                 MsgBox("You are playing for 1,000 Dollars!")
                 dblValue = 1000
             End If
@@ -113,6 +124,8 @@ Public Class frmGame
             btnY.Enabled = True
             btnZ.Enabled = True
 
+
+            Timer1.Interval = 100
         Else
             If wheelstate = 24 Then
                 wheelstate = 0
@@ -132,32 +145,6 @@ Public Class frmGame
 
     Private Sub NewGame()
         lblWord.Text = String.Empty
-        btnA.Enabled = True
-        btnB.Enabled = True
-        btnC.Enabled = True
-        btnD.Enabled = True
-        btnE.Enabled = True
-        btnF.Enabled = True
-        btnG.Enabled = True
-        btnH.Enabled = True
-        btnI.Enabled = True
-        btnJ.Enabled = True
-        btnK.Enabled = True
-        btnL.Enabled = True
-        btnM.Enabled = True
-        btnN.Enabled = True
-        btnO.Enabled = True
-        btnP.Enabled = True
-        btnQ.Enabled = True
-        btnR.Enabled = True
-        btnS.Enabled = True
-        btnT.Enabled = True
-        btnU.Enabled = True
-        btnV.Enabled = True
-        btnW.Enabled = True
-        btnX.Enabled = True
-        btnY.Enabled = True
-        btnZ.Enabled = True
 
 
         If dblDiff = 1 Then
@@ -179,7 +166,7 @@ Public Class frmGame
 
             For intIndex As Integer = 0 To randWord.Length - 1
                 If randWord(intIndex) = Space(1) Then
-                    lblWord.Text = lblWord.Text + " "
+                    lblWord.Text = lblWord.Text + " " + "  "
 
 
                 Else
@@ -206,7 +193,7 @@ Public Class frmGame
                 If randWord(intIndex) = Space(1) Then
 
 
-                    lblWord.Text = lblWord.Text + " "
+                    lblWord.Text = lblWord.Text + " " + "  "
 
 
                 Else
@@ -239,8 +226,18 @@ Public Class frmGame
 
 
 
-                    strResult = strResult.Remove(intIndex, 1)
-                    strResult = strResult.Insert(intIndex, strLetter)
+                    strResult = strResult.Remove(intIndex * 2, 1)
+                    strResult = strResult.Insert(intIndex * 2, strLetter)
+
+                    If TurnState = 1 Then
+                        lblOnecount.Text = countOne
+                        lblOnecount.Text = (countOne + dblValue).ToString("C2")
+                        countOne = lblOnecount.Text
+                    ElseIf TurnState = 2 Then
+                        lblTwocount.Text = countTwo
+                        lblTwocount.Text = (countTwo + dblValue).ToString("C2")
+                        countTwo = lblTwocount.Text
+                    End If
 
                 End If
             Next
@@ -254,23 +251,17 @@ Public Class frmGame
 
 
             ' Determine whether strResult contains any hyphens.
-            If TurnState = 1 Then
-                lblOnecount.Text = countOne
-                lblOnecount.Text = (countOne + dblValue).ToString("C2")
-                countOne = lblOnecount.Text
-            ElseIf TurnState = 2 Then
-                lblTwocount.Text = countTwo
-                lblTwocount.Text = (countTwo + dblValue).ToString("C2")
-                countTwo = lblTwocount.Text
-            End If
 
             If strResult.Contains("_") = False Then
 
                 Winstate()
 
             End If
+            btnSolve.Enabled = True
+            txtSolve.Enabled = True
         Else
-
+            btnSolve.Enabled = False
+            txtSolve.Enabled = False
             If TurnState = 1 Then
                 TurnState = 2
             ElseIf TurnState = 2 Then
@@ -445,7 +436,15 @@ Public Class frmGame
         Dim strSA As String = txtSolve.Text.ToString
 
         If strSA.ToString.ToUpper = strWord.ToUpper Then
-
+            If TurnState = 1 Then
+                lblOnecount.Text = countOne
+                lblOnecount.Text = (countOne + 3000).ToString("C2")
+                countOne = lblOnecount.Text
+            ElseIf TurnState = 2 Then
+                lblTwocount.Text = countTwo
+                lblTwocount.Text = (countTwo + 3000).ToString("C2")
+                countTwo = lblTwocount.Text
+            End If
             Winstate()
 
         ElseIf strSA.ToString.ToUpper <> strWord.ToUpper Then
@@ -477,6 +476,33 @@ Public Class frmGame
                 MessageBoxButtons.YesNo,
                   MessageBoxIcon.Exclamation)
             If dlgbutton = DialogResult.Yes Then
+                lblWord.Text = String.Empty
+                btnA.Enabled = True
+                btnB.Enabled = True
+                btnC.Enabled = True
+                btnD.Enabled = True
+                btnE.Enabled = True
+                btnF.Enabled = True
+                btnG.Enabled = True
+                btnH.Enabled = True
+                btnI.Enabled = True
+                btnJ.Enabled = True
+                btnK.Enabled = True
+                btnL.Enabled = True
+                btnM.Enabled = True
+                btnN.Enabled = True
+                btnO.Enabled = True
+                btnP.Enabled = True
+                btnQ.Enabled = True
+                btnR.Enabled = True
+                btnS.Enabled = True
+                btnT.Enabled = True
+                btnU.Enabled = True
+                btnV.Enabled = True
+                btnW.Enabled = True
+                btnX.Enabled = True
+                btnY.Enabled = True
+                btnZ.Enabled = True
                 NewGame()
             ElseIf dlgbutton = DialogResult.No Then
                 frmExtra.Close()
@@ -490,6 +516,33 @@ Public Class frmGame
                     MessageBoxButtons.YesNo,
                       MessageBoxIcon.Exclamation)
             If dlgbutton = DialogResult.Yes Then
+                lblWord.Text = String.Empty
+                btnA.Enabled = True
+                btnB.Enabled = True
+                btnC.Enabled = True
+                btnD.Enabled = True
+                btnE.Enabled = True
+                btnF.Enabled = True
+                btnG.Enabled = True
+                btnH.Enabled = True
+                btnI.Enabled = True
+                btnJ.Enabled = True
+                btnK.Enabled = True
+                btnL.Enabled = True
+                btnM.Enabled = True
+                btnN.Enabled = True
+                btnO.Enabled = True
+                btnP.Enabled = True
+                btnQ.Enabled = True
+                btnR.Enabled = True
+                btnS.Enabled = True
+                btnT.Enabled = True
+                btnU.Enabled = True
+                btnV.Enabled = True
+                btnW.Enabled = True
+                btnX.Enabled = True
+                btnY.Enabled = True
+                btnZ.Enabled = True
                 NewGame()
             ElseIf dlgbutton = DialogResult.No Then
                 frmExtra.Close()

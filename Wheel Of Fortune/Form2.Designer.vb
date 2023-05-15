@@ -71,7 +71,7 @@ Partial Class frmGame
         '
         Me.lblTitle.Font = New System.Drawing.Font("Arial Rounded MT Bold", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblTitle.Location = New System.Drawing.Point(275, -3)
+        Me.lblTitle.Location = New System.Drawing.Point(350, 35)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(439, 64)
         Me.lblTitle.TabIndex = 18
@@ -140,7 +140,7 @@ Partial Class frmGame
         '
         Me.Button1.Location = New System.Drawing.Point(1, 484)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(396, 99)
+        Me.Button1.Size = New System.Drawing.Size(396, 121)
         Me.Button1.TabIndex = 38
         Me.Button1.Text = "Spin!"
         Me.Button1.UseVisualStyleBackColor = True
@@ -149,7 +149,7 @@ Partial Class frmGame
         '
         Me.txtSolve.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtSolve.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSolve.Location = New System.Drawing.Point(533, 449)
+        Me.txtSolve.Location = New System.Drawing.Point(533, 554)
         Me.txtSolve.Name = "txtSolve"
         Me.txtSolve.Size = New System.Drawing.Size(274, 29)
         Me.txtSolve.TabIndex = 80
@@ -157,7 +157,7 @@ Partial Class frmGame
         'btnY
         '
         Me.btnY.Enabled = False
-        Me.btnY.Location = New System.Drawing.Point(717, 336)
+        Me.btnY.Location = New System.Drawing.Point(717, 390)
         Me.btnY.Name = "btnY"
         Me.btnY.Size = New System.Drawing.Size(52, 21)
         Me.btnY.TabIndex = 79
@@ -167,7 +167,7 @@ Partial Class frmGame
         'btnX
         '
         Me.btnX.Enabled = False
-        Me.btnX.Location = New System.Drawing.Point(472, 390)
+        Me.btnX.Location = New System.Drawing.Point(472, 444)
         Me.btnX.Name = "btnX"
         Me.btnX.Size = New System.Drawing.Size(52, 21)
         Me.btnX.TabIndex = 78
@@ -176,7 +176,7 @@ Partial Class frmGame
         '
         'btnSolve
         '
-        Me.btnSolve.Location = New System.Drawing.Point(421, 449)
+        Me.btnSolve.Location = New System.Drawing.Point(421, 554)
         Me.btnSolve.Name = "btnSolve"
         Me.btnSolve.Size = New System.Drawing.Size(102, 29)
         Me.btnSolve.TabIndex = 77
@@ -186,7 +186,7 @@ Partial Class frmGame
         'btnZ
         '
         Me.btnZ.Enabled = False
-        Me.btnZ.Location = New System.Drawing.Point(411, 390)
+        Me.btnZ.Location = New System.Drawing.Point(411, 444)
         Me.btnZ.Name = "btnZ"
         Me.btnZ.Size = New System.Drawing.Size(52, 21)
         Me.btnZ.TabIndex = 76
@@ -196,7 +196,7 @@ Partial Class frmGame
         'btnW
         '
         Me.btnW.Enabled = False
-        Me.btnW.Location = New System.Drawing.Point(472, 336)
+        Me.btnW.Location = New System.Drawing.Point(472, 390)
         Me.btnW.Name = "btnW"
         Me.btnW.Size = New System.Drawing.Size(52, 21)
         Me.btnW.TabIndex = 75
@@ -206,7 +206,7 @@ Partial Class frmGame
         'btnV
         '
         Me.btnV.Enabled = False
-        Me.btnV.Location = New System.Drawing.Point(595, 390)
+        Me.btnV.Location = New System.Drawing.Point(595, 444)
         Me.btnV.Name = "btnV"
         Me.btnV.Size = New System.Drawing.Size(52, 21)
         Me.btnV.TabIndex = 74
@@ -216,7 +216,7 @@ Partial Class frmGame
         'btnU
         '
         Me.btnU.Enabled = False
-        Me.btnU.Location = New System.Drawing.Point(778, 336)
+        Me.btnU.Location = New System.Drawing.Point(778, 390)
         Me.btnU.Name = "btnU"
         Me.btnU.Size = New System.Drawing.Size(52, 21)
         Me.btnU.TabIndex = 73
@@ -226,7 +226,7 @@ Partial Class frmGame
         'btnT
         '
         Me.btnT.Enabled = False
-        Me.btnT.Location = New System.Drawing.Point(656, 336)
+        Me.btnT.Location = New System.Drawing.Point(656, 390)
         Me.btnT.Name = "btnT"
         Me.btnT.Size = New System.Drawing.Size(52, 21)
         Me.btnT.TabIndex = 72
@@ -236,7 +236,7 @@ Partial Class frmGame
         'btnS
         '
         Me.btnS.Enabled = False
-        Me.btnS.Location = New System.Drawing.Point(472, 363)
+        Me.btnS.Location = New System.Drawing.Point(472, 417)
         Me.btnS.Name = "btnS"
         Me.btnS.Size = New System.Drawing.Size(52, 21)
         Me.btnS.TabIndex = 71
@@ -246,7 +246,7 @@ Partial Class frmGame
         'btnP
         '
         Me.btnP.Enabled = False
-        Me.btnP.Location = New System.Drawing.Point(960, 336)
+        Me.btnP.Location = New System.Drawing.Point(960, 390)
         Me.btnP.Name = "btnP"
         Me.btnP.Size = New System.Drawing.Size(52, 21)
         Me.btnP.TabIndex = 70
@@ -256,7 +256,7 @@ Partial Class frmGame
         'btnO
         '
         Me.btnO.Enabled = False
-        Me.btnO.Location = New System.Drawing.Point(899, 336)
+        Me.btnO.Location = New System.Drawing.Point(899, 390)
         Me.btnO.Name = "btnO"
         Me.btnO.Size = New System.Drawing.Size(52, 21)
         Me.btnO.TabIndex = 69
@@ -266,7 +266,7 @@ Partial Class frmGame
         'btnR
         '
         Me.btnR.Enabled = False
-        Me.btnR.Location = New System.Drawing.Point(594, 336)
+        Me.btnR.Location = New System.Drawing.Point(594, 390)
         Me.btnR.Name = "btnR"
         Me.btnR.Size = New System.Drawing.Size(53, 21)
         Me.btnR.TabIndex = 68
@@ -276,7 +276,7 @@ Partial Class frmGame
         'btnQ
         '
         Me.btnQ.Enabled = False
-        Me.btnQ.Location = New System.Drawing.Point(411, 336)
+        Me.btnQ.Location = New System.Drawing.Point(411, 390)
         Me.btnQ.Name = "btnQ"
         Me.btnQ.Size = New System.Drawing.Size(52, 21)
         Me.btnQ.TabIndex = 67
@@ -286,7 +286,7 @@ Partial Class frmGame
         'btnN
         '
         Me.btnN.Enabled = False
-        Me.btnN.Location = New System.Drawing.Point(717, 390)
+        Me.btnN.Location = New System.Drawing.Point(717, 444)
         Me.btnN.Name = "btnN"
         Me.btnN.Size = New System.Drawing.Size(52, 21)
         Me.btnN.TabIndex = 66
@@ -296,7 +296,7 @@ Partial Class frmGame
         'btnM
         '
         Me.btnM.Enabled = False
-        Me.btnM.Location = New System.Drawing.Point(778, 390)
+        Me.btnM.Location = New System.Drawing.Point(778, 444)
         Me.btnM.Name = "btnM"
         Me.btnM.Size = New System.Drawing.Size(52, 21)
         Me.btnM.TabIndex = 65
@@ -306,7 +306,7 @@ Partial Class frmGame
         'btnL
         '
         Me.btnL.Enabled = False
-        Me.btnL.Location = New System.Drawing.Point(901, 363)
+        Me.btnL.Location = New System.Drawing.Point(901, 417)
         Me.btnL.Name = "btnL"
         Me.btnL.Size = New System.Drawing.Size(52, 21)
         Me.btnL.TabIndex = 64
@@ -316,7 +316,7 @@ Partial Class frmGame
         'btnK
         '
         Me.btnK.Enabled = False
-        Me.btnK.Location = New System.Drawing.Point(840, 363)
+        Me.btnK.Location = New System.Drawing.Point(840, 417)
         Me.btnK.Name = "btnK"
         Me.btnK.Size = New System.Drawing.Size(52, 21)
         Me.btnK.TabIndex = 63
@@ -326,7 +326,7 @@ Partial Class frmGame
         'btnJ
         '
         Me.btnJ.Enabled = False
-        Me.btnJ.Location = New System.Drawing.Point(778, 363)
+        Me.btnJ.Location = New System.Drawing.Point(778, 417)
         Me.btnJ.Name = "btnJ"
         Me.btnJ.Size = New System.Drawing.Size(52, 21)
         Me.btnJ.TabIndex = 62
@@ -336,7 +336,7 @@ Partial Class frmGame
         'btnG
         '
         Me.btnG.Enabled = False
-        Me.btnG.Location = New System.Drawing.Point(656, 363)
+        Me.btnG.Location = New System.Drawing.Point(656, 417)
         Me.btnG.Name = "btnG"
         Me.btnG.Size = New System.Drawing.Size(52, 21)
         Me.btnG.TabIndex = 61
@@ -346,7 +346,7 @@ Partial Class frmGame
         'btnF
         '
         Me.btnF.Enabled = False
-        Me.btnF.Location = New System.Drawing.Point(595, 363)
+        Me.btnF.Location = New System.Drawing.Point(595, 417)
         Me.btnF.Name = "btnF"
         Me.btnF.Size = New System.Drawing.Size(52, 21)
         Me.btnF.TabIndex = 60
@@ -356,7 +356,7 @@ Partial Class frmGame
         'btnI
         '
         Me.btnI.Enabled = False
-        Me.btnI.Location = New System.Drawing.Point(839, 336)
+        Me.btnI.Location = New System.Drawing.Point(839, 390)
         Me.btnI.Name = "btnI"
         Me.btnI.Size = New System.Drawing.Size(53, 21)
         Me.btnI.TabIndex = 59
@@ -366,7 +366,7 @@ Partial Class frmGame
         'btnH
         '
         Me.btnH.Enabled = False
-        Me.btnH.Location = New System.Drawing.Point(717, 363)
+        Me.btnH.Location = New System.Drawing.Point(717, 417)
         Me.btnH.Name = "btnH"
         Me.btnH.Size = New System.Drawing.Size(52, 21)
         Me.btnH.TabIndex = 58
@@ -376,7 +376,7 @@ Partial Class frmGame
         'btnE
         '
         Me.btnE.Enabled = False
-        Me.btnE.Location = New System.Drawing.Point(533, 336)
+        Me.btnE.Location = New System.Drawing.Point(533, 390)
         Me.btnE.Name = "btnE"
         Me.btnE.Size = New System.Drawing.Size(52, 21)
         Me.btnE.TabIndex = 57
@@ -386,7 +386,7 @@ Partial Class frmGame
         'btnD
         '
         Me.btnD.Enabled = False
-        Me.btnD.Location = New System.Drawing.Point(533, 363)
+        Me.btnD.Location = New System.Drawing.Point(533, 417)
         Me.btnD.Name = "btnD"
         Me.btnD.Size = New System.Drawing.Size(52, 21)
         Me.btnD.TabIndex = 56
@@ -396,7 +396,7 @@ Partial Class frmGame
         'btnC
         '
         Me.btnC.Enabled = False
-        Me.btnC.Location = New System.Drawing.Point(533, 390)
+        Me.btnC.Location = New System.Drawing.Point(533, 444)
         Me.btnC.Name = "btnC"
         Me.btnC.Size = New System.Drawing.Size(52, 21)
         Me.btnC.TabIndex = 55
@@ -406,7 +406,7 @@ Partial Class frmGame
         'btnB
         '
         Me.btnB.Enabled = False
-        Me.btnB.Location = New System.Drawing.Point(656, 390)
+        Me.btnB.Location = New System.Drawing.Point(656, 444)
         Me.btnB.Name = "btnB"
         Me.btnB.Size = New System.Drawing.Size(52, 21)
         Me.btnB.TabIndex = 54
@@ -416,7 +416,7 @@ Partial Class frmGame
         'btnA
         '
         Me.btnA.Enabled = False
-        Me.btnA.Location = New System.Drawing.Point(411, 363)
+        Me.btnA.Location = New System.Drawing.Point(411, 417)
         Me.btnA.Name = "btnA"
         Me.btnA.Size = New System.Drawing.Size(52, 21)
         Me.btnA.TabIndex = 53
@@ -427,10 +427,10 @@ Partial Class frmGame
         '
         Me.lblWord.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblWord.Font = New System.Drawing.Font("Arial Rounded MT Bold", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblWord.Location = New System.Drawing.Point(403, 95)
+        Me.lblWord.Location = New System.Drawing.Point(403, 130)
         Me.lblWord.Name = "lblWord"
         Me.lblWord.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.lblWord.Size = New System.Drawing.Size(609, 214)
+        Me.lblWord.Size = New System.Drawing.Size(609, 246)
         Me.lblWord.TabIndex = 81
         Me.lblWord.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -470,9 +470,9 @@ Partial Class frmGame
         'picWheel
         '
         Me.picWheel.Image = Global.Wheel_Of_Fortune.My.Resources.Resources.w0
-        Me.picWheel.Location = New System.Drawing.Point(1, 149)
+        Me.picWheel.Location = New System.Drawing.Point(1, 130)
         Me.picWheel.Name = "picWheel"
-        Me.picWheel.Size = New System.Drawing.Size(396, 329)
+        Me.picWheel.Size = New System.Drawing.Size(396, 348)
         Me.picWheel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.picWheel.TabIndex = 37
         Me.picWheel.TabStop = False
@@ -481,7 +481,7 @@ Partial Class frmGame
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1018, 629)
+        Me.ClientSize = New System.Drawing.Size(1018, 604)
         Me.Controls.Add(Me.lblWord)
         Me.Controls.Add(Me.txtSolve)
         Me.Controls.Add(Me.btnY)
